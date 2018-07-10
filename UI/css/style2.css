@@ -1,16 +1,16 @@
+
 .top{
-    background-image:url(../img/background10.jpg);
+    background-image:url(../img/background5.jpg);
     height: 640px;
     background-size: cover;
 }
 .Nav-bar{
-    /* padding: 0px 80px; */
    width: 85%;
    margin-right: auto;
    margin-left: auto;
 }
 .bar{
-    background-color: pink;
+    background-color:#2196f3;
     position: fixed;
     top: 0;
     width: 100%;
@@ -21,7 +21,6 @@ ul {
     margin: 0;
     padding: 10px;
     overflow: hidden;
-    background-color: pink;
 }
 .right-nav {
     float: right;
@@ -52,11 +51,66 @@ li a:hover:not(.active) {
     color: #115b95;
 }
 
-.footer {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color:#000;
-    color: white;
+.home-text{
     text-align: center;
+    padding-top: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+}
+
+.home-text h1{
+	font-size:65px;
+    color: white;
+    text-shadow:0 1px 0 #ccc,
+                0 2px 0 #c9c9c9,
+                0 3px 0 #bbb,
+                0 4px 0 #b9b9b9,
+                0 5px 0 #aaa,
+                0 6px 1px rgba(0,0,0,.1),
+                0 0 5px rgba(0,0,0,.1),
+                0 1px 3px rgba(0,0,0,.3),
+                0 3px 5px rgba(0,0,0,.2),
+                0 5px 10px rgba(0,0,0,.25),
+                0 10px 10px rgba(0,0,0,.2),
+                0 20px 20px rgba(0,0,0,.15); 
+}
+
+.home-text p {
+    color:#000;
+    font-size: 20px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    font-style: bold;
+}
+
+.btn{
+	width: 20%;
+	height:50px;
+	color: white;
+	background:rgb(33,150,243); 
+    border: 0;
+    border-radius: 3%;
+	padding:10px; 
+    margin-top:20px;
+    font-weight: bold;
+     
+}
+
+.btn:hover{
+    background-color: #115b95;
+    box-shadow:1px 2px 3px 2px #ccc;
+	transition: .15s ease-in-out;
+	cursor: pointer;
+  } 
+
+
+
+footer {
+    bottom: 0;
+    background-color:#000;
+    opacity: 1;
+    color: #fff;
+    height:80px;
+    padding: 5px 20px 5px 20px;
+    text-align: center; 
 }
