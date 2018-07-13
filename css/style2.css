@@ -2,9 +2,10 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 .top{
-    background-image:url(../img/background5.jpg);
+    background-image:url(../img/background10.jpg);
     height: 640px;
     background-size: cover;
+    margin-right: -10px;
 }
 .page{
     background-image:url(../img/background.jpg);
@@ -256,7 +257,7 @@ input{
 } */
 
 /* Add Animation */
-@-webkit-keyframes animatetop {
+/* @-webkit-keyframes animatetop {
     from {top:-300px; opacity:0} 
     to {top:0; opacity:1}
 }
@@ -264,7 +265,7 @@ input{
 @keyframes animatetop {
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
-}
+} */
 
 /* The Close Button  */
  /* .close, .close2 {
@@ -298,5 +299,6 @@ footer {
     color: #fff;
     height:80px;
     padding: 5px 20px 5px 20px;
+    margin-right: -10px;
     text-align: center; 
 }
