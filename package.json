@@ -1,0 +1,30 @@
+{
+  "name": "mydiary",
+  "version": "1.0.0",
+  "description": "MyDiary is an online journal web application where users can pen down their thoughts and feelings.",
+  "main": "app.js",
+  "scripts": {
+    "start": "babel-node --presets env server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darhmylarhrey/MyDiary.git"
+  },
+  "author": "Abobarin afeez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darhmylarhrey/MyDiary/issues"
+  },
+  "homepage": "https://github.com/darhmylarhrey/MyDiary#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "body-parser": "^1.18.3",
+    "eslint": "^5.1.0",
+    "express": "^4.16.3",
+    "moment": "^2.22.2",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
+}
