@@ -6,6 +6,7 @@
   "scripts": {
     "test": "cross-env NODE_ENV=test nyc mocha  --require babel-register --timeout 6000 ./server/test/diary-test.js --exit",
     "start": "babel-node --presets env server/app.js"
+    
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,8 @@
     "express": "^4.16.3",
     "moment": "^2.22.2",
     "morgan": "^1.9.0",
-    "nyc": "^12.0.2"
+    "nyc": "^12.0.2",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-babel": "^1.2.3",
