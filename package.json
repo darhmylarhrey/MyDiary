@@ -4,6 +4,7 @@
   "description": "MyDiary is an online journal web application where users can pen down their thoughts and feelings.",
   "main": "app.js",
   "scripts": {
+    "test": "cross-env NODE_ENV=test nyc mocha  --require babel-register --timeout 6000 ./server/test/diary-test.js --exit",
     "start": "babel-node --presets env server/app.js"
   },
   "repository": {
@@ -20,9 +21,12 @@
     "babel-preset-env": "^1.7.0",
     "body-parser": "^1.18.3",
     "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "cross-env": "^5.2.0",
     "express": "^4.16.3",
     "moment": "^2.22.2",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "nyc": "^12.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

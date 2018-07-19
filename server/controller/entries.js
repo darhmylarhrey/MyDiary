@@ -20,7 +20,7 @@ class EntriesController {
     const { title, entry } = req.body;
 
     if (!title || !entry || title.length < 1 || entry.length < 1) {
-      return res.status(404).json({ message: 'Fields cannot be empty, please in the missing field' });
+      return res.status(404).json({ message: 'Fields cannot be empty, please fill in the missing field' });
     }
 
     const newEntry = {
@@ -144,11 +144,15 @@ class EntriesController {
     const index = entries.indexOf(entryFound);
 
     if (!title || title.length < 1) {
-      return res.status(404).json({ message: 'Title field cannot be empty' });
+      return res.status(404).json({ 
+        message: 'Title field cannot be empty' 
+      });
     }
 
     if (!entry || entry.length < 1) {
-      return res.status(404).json({ message: 'Entry field cannot be empty' });
+      return res.status(404).json({ 
+        message: 'Entry field cannot be empty' 
+      });
     }
 
     const updatedEntry = {
