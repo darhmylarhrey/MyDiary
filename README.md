@@ -6,3 +6,4 @@ MyDiary is an online journal web application where users can pen down their thou
 
 [![Build Status](https://travis-ci.org/darhmylarhrey/MyDiary.svg?branch=develop)](https://travis-ci.org/darhmylarhrey/MyDiary)
 [![Coverage Status](https://coveralls.io/repos/github/darhmylarhrey/MyDiary/badge.svg?branch=develop)](https://coveralls.io/github/darhmylarhrey/MyDiary?branch=develop)
+[![Coverage Status](https://coveralls.io/repos/github/darhmylarhrey/MyDiary/badge.svg)](https://coveralls.io/github/darhmylarhrey/MyDiary)
