@@ -103,4 +103,4 @@ This projects is under the ISC LICENSE
 - [Andela](http://andela.com)
 - [Google Search](https://google.com)
 - [Stackoverflow](stackoverflow.com)
-- [w3School](w3school.com)
+- [w3Schools](w3schools.com)
