@@ -115,9 +115,6 @@ class EntriesController {
     });
   }
 
-
-
-
   /**
    * Update an existing entry
    *
@@ -129,32 +126,26 @@ class EntriesController {
   static update(req, res) {
     const { entryId } = req.params;
     const { title, entry } = req.body;
-
     // find entry with params entryId
     const entryFound = entries.find(entryItem => entryItem.entryId === entryId);
-
     // if entry does not exist...
     if (!entryFound) {
       return res.status(404).json({
         message: 'Entry cannot be found in the db',
       });
     }
-
     // Get index of entry
     const index = entries.indexOf(entryFound);
-
     if (!title || title.length < 1) {
       return res.status(404).json({ 
         message: 'Title field cannot be empty' 
       });
     }
-
     if (!entry || entry.length < 1) {
       return res.status(404).json({ 
         message: 'Entry field cannot be empty' 
       });
     }
-
     const updatedEntry = {
       entryId,
       title,
@@ -162,7 +153,6 @@ class EntriesController {
       date,
       time,
     };
-
     // Replace entry with the updated entry
     entries.splice(index, 1, updatedEntry);
     return res.status(201).json({
