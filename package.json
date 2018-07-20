@@ -10,6 +10,9 @@
     "start": "nodemon --exec babel-node --presets env server/app.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
+  "engines": {
+    "node": "10.6.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/darhmylarhrey/MyDiary.git"
