@@ -1,0 +1,59 @@
+body{
+background:#2196f3;	
+font-family: arial,sans-serif;
+}
+.container-fluid{
+background: white;
+text-align: center;
+padding: 30px 0px;
+margin-top: 100px;
+margin-right: auto;
+margin-left: auto;
+width: 400px;
+border-radius: 1%;
+/* box-shadow:1px 2px 10px 2px #115b95; */
+box-shadow: 15px 35px 20px #115b95;
+}
+.userEmail, .password, .repeat-password{
+	width: 80%;
+	height:35px;
+	background:#f2f2f2;
+	border: 0; 
+	padding:10px;
+	margin-top: 20px; 
+}
+.wrapper{
+	padding: 0 20px;
+}
+.forgotPassword{
+	text-align: left;
+	padding-left: 33px;
+}
+
+.btn{
+	width: 85%;
+	height:50px;
+	color: white;
+	background:rgb(33,150,243); 
+	border: 0;
+	padding:10px; 
+	margin-top:20px; 
+}
+
+.btn:hover{
+    background-color: pink;
+    box-shadow:1px 2px 3px 2px #ccc;
+	transition: .15s ease-in-out;
+	cursor: pointer;
+  } 
+	
+p {
+   font-size: 15px;
+   font-family: arial,sans-serif;
+   color: grey; 	
+}
+a{
+  color:#2196f3;;
+  font-family: arial,sans-serif;
+  text-decoration: none;
+}
