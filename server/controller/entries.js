@@ -6,8 +6,17 @@ import GUID from '../utils/guid';
  * @exports
  * @class DriverController
  */
-
 class EntriesController {
+  /**
+   * Welcome page
+   * @staticmethod
+   * @param {object} req - Request object
+   * @param {object} res - Response object
+   * @return {json} res.json
+   */
+  static welcome(req, res) {
+    return res.status(200).json('Welcome to My Diary app');
+  }
 
   /**
    * Creates a new entry
@@ -19,29 +28,16 @@ class EntriesController {
   static create(req, res) {
     const { title, entry } = req.body;
 
-    if (!title || !entry || title.length < 1 || entry.length < 1) {
-      return res.status(404).json({ message: 'Fields cannot be empty, please fill in the missing field' });
-    }
-
-    const newEntry = {
-      entryId: GUID,
-      title,
-      entry,
-      date,
-      time,
-    };
+    const newEntry = { entryId: GUID, title, entry, date, time };
 
     // adds the new entry to the database
     entries.push(newEntry);
 
     return res.status(201).json({
-      message: 'Diary Entry was added successfully',
+      message: 'Entry added successfully',
       newEntry,
     });
   }
-
-
-
 
   /**
    * Deletes an entry
@@ -91,14 +87,12 @@ class EntriesController {
       });
     }
 
-    // if  entry exists...
+    // if diary entry exists...
     return res.status(200).json({
       message: 'Entry was found',
       entryFound,
     });
   }
-
-
 
   /**
    * Get all diary entries
@@ -110,7 +104,7 @@ class EntriesController {
    */
   static getAllEntries(_req, res) {
     res.status(200).json({
-      message: 'Diary Entries retrieved successfully',
+      message: 'Entries retrieved successfully',
       entries,
     });
   }
@@ -125,38 +119,25 @@ class EntriesController {
    */
   static update(req, res) {
     const { entryId } = req.params;
-    const { title, entry } = req.body;
+    const { title, entry} = req.body;
+
     // find entry with params entryId
     const entryFound = entries.find(entryItem => entryItem.entryId === entryId);
+
     // if entry does not exist...
-    if (!entryFound) {
-      return res.status(404).json({
-        message: 'Entry cannot be found in the db',
-      });
-    }
+    if (!entryFound) return res.status(404).json({ message: 'Entry does not exist' });
+
     // Get index of entry
     const index = entries.indexOf(entryFound);
-    if (!title || title.length < 1) {
-      return res.status(404).json({ 
-        message: 'Title field cannot be empty' 
-      });
-    }
-    if (!entry || entry.length < 1) {
-      return res.status(404).json({ 
-        message: 'Entry field cannot be empty' 
-      });
-    }
+
     const updatedEntry = {
-      entryId,
-      title,
-      entry,
-      date,
-      time,
+      entryId, title, entry, date, time,
     };
+
     // Replace entry with the updated entry
     entries.splice(index, 1, updatedEntry);
     return res.status(201).json({
-      message: 'Diary Entry was modified successfully',
+      message: 'Entry modified successfully',
       updatedEntry,
     });
   }
