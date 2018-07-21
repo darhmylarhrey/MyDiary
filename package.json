@@ -5,13 +5,13 @@
   "main": "app.js",
   "scripts": {
     "test": "cross-env NODE_ENV=test nyc mocha  --require babel-register --timeout 6000 ./server/test/diary-test.js --exit",
-    "build": "babel server -d server/build",
     "lint:js": "eslint --fix server/**/*.js",
     "start": "nodemon --exec babel-node --presets env server/app.js",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
-  },
-  "engines": {
-    "node": "10.6.0"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+   
+    "build-babel": "babel -d ./build ./server -s",
+    "build": "npm run build-babel",
+    "start:dev": "npm run build && node ./build/app.js"
   },
   "repository": {
     "type": "git",
