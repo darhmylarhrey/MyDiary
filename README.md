@@ -37,7 +37,7 @@ If you don't have **NodeJS** installed go to the [NodeJS Website](http://nodejs.
 To install this app
 
 ```
-git clone https://github.com/EphraimDev/MyDiary.git
+git clone https://github.com/darhmylarhrey/MyDiary.git
 ```
 
 And install the required dependencies
