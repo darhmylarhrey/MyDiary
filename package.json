@@ -13,6 +13,9 @@
     "build": "npm run build-babel",
     "start:dev": "npm run build && node ./build/app.js"
   },
+  "engines": {
+    "node": "10.6.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/darhmylarhrey/MyDiary.git"
