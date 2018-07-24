@@ -1,13 +1,13 @@
 'use strict';
 
-var cov_ng5wgb9mi = function () {
-  var path = 'C:\\Users\\tunde\\Desktop\\Fizzo\\MyDiary\\server\\controller\\entries.js',
-      hash = 'e4f0c774711a87b6a373aec8c18be4c9f8f98a12',
+var cov_fvovny6iz = function () {
+  var path = 'C:\\Users\\tunde\\Desktop\\MyDiary\\server\\controller\\entries.js',
+      hash = 'df640652cde54384b753f3047ae4053f9fa18d17',
       Function = function () {}.constructor,
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: 'C:\\Users\\tunde\\Desktop\\Fizzo\\MyDiary\\server\\controller\\entries.js',
+    path: 'C:\\Users\\tunde\\Desktop\\MyDiary\\server\\controller\\entries.js',
     statementMap: {
       '0': {
         start: {
@@ -707,8 +707,8 @@ class EntriesController {
    * @return {json} res.json
    */
   static welcome(req, res) {
-    cov_ng5wgb9mi.f[0]++;
-    cov_ng5wgb9mi.s[0]++;
+    cov_fvovny6iz.f[0]++;
+    cov_fvovny6iz.s[0]++;
 
     return res.status(200).json('Welcome to My Diary app');
   }
@@ -721,17 +721,17 @@ class EntriesController {
    * @return {json} res.json
    */
   static create(req, res) {
-    cov_ng5wgb9mi.f[1]++;
+    cov_fvovny6iz.f[1]++;
 
-    const { title, entry } = (cov_ng5wgb9mi.s[1]++, req.body);
+    const { title, entry } = (cov_fvovny6iz.s[1]++, req.body);
 
-    const newEntry = (cov_ng5wgb9mi.s[2]++, { entryId: _guid2.default, title, entry, date: _moment.date, time: _moment.time });
+    const newEntry = (cov_fvovny6iz.s[2]++, { entryId: _guid2.default, title, entry, date: _moment.date, time: _moment.time });
 
     // adds the new entry to the database
-    cov_ng5wgb9mi.s[3]++;
+    cov_fvovny6iz.s[3]++;
     _db2.default.push(newEntry);
 
-    cov_ng5wgb9mi.s[4]++;
+    cov_fvovny6iz.s[4]++;
     return res.status(201).json({
       message: 'Entry added successfully',
       newEntry
@@ -747,34 +747,34 @@ class EntriesController {
    * @return {json} res.json
    */
   static deleteEntry(req, res) {
-    cov_ng5wgb9mi.f[2]++;
+    cov_fvovny6iz.f[2]++;
 
-    const { entryId } = (cov_ng5wgb9mi.s[5]++, req.params);
+    const { entryId } = (cov_fvovny6iz.s[5]++, req.params);
 
     // check if entry exists
-    const entryFound = (cov_ng5wgb9mi.s[6]++, _db2.default.find(entry => {
-      cov_ng5wgb9mi.f[3]++;
-      cov_ng5wgb9mi.s[7]++;
+    const entryFound = (cov_fvovny6iz.s[6]++, _db2.default.find(entry => {
+      cov_fvovny6iz.f[3]++;
+      cov_fvovny6iz.s[7]++;
       return entry.entryId === entryId;
     }));
 
     // If entry does not exist...
-    cov_ng5wgb9mi.s[8]++;
+    cov_fvovny6iz.s[8]++;
     if (!entryFound) {
-      cov_ng5wgb9mi.b[0][0]++;
-      cov_ng5wgb9mi.s[9]++;
+      cov_fvovny6iz.b[0][0]++;
+      cov_fvovny6iz.s[9]++;
 
       return res.status(404).json({
         message: 'Entry not found'
       });
     } else {
-      cov_ng5wgb9mi.b[0][1]++;
+      cov_fvovny6iz.b[0][1]++;
     }
 
     // if entry exists...
-    cov_ng5wgb9mi.s[10]++;
+    cov_fvovny6iz.s[10]++;
     _db2.default.splice(_db2.default.indexOf(entryFound), 1);
-    cov_ng5wgb9mi.s[11]++;
+    cov_fvovny6iz.s[11]++;
     return res.status(204).json();
   }
 
@@ -788,32 +788,32 @@ class EntriesController {
    * @return {json} res.json
    */
   static getEntry(req, res) {
-    cov_ng5wgb9mi.f[4]++;
+    cov_fvovny6iz.f[4]++;
 
-    const { entryId } = (cov_ng5wgb9mi.s[12]++, req.params);
+    const { entryId } = (cov_fvovny6iz.s[12]++, req.params);
 
     // find entry with params entryId
-    const entryFound = (cov_ng5wgb9mi.s[13]++, _db2.default.find(entry => {
-      cov_ng5wgb9mi.f[5]++;
-      cov_ng5wgb9mi.s[14]++;
+    const entryFound = (cov_fvovny6iz.s[13]++, _db2.default.find(entry => {
+      cov_fvovny6iz.f[5]++;
+      cov_fvovny6iz.s[14]++;
       return entry.entryId === entryId;
     }));
 
     // if entry does not exist...
-    cov_ng5wgb9mi.s[15]++;
+    cov_fvovny6iz.s[15]++;
     if (!entryFound) {
-      cov_ng5wgb9mi.b[1][0]++;
-      cov_ng5wgb9mi.s[16]++;
+      cov_fvovny6iz.b[1][0]++;
+      cov_fvovny6iz.s[16]++;
 
       return res.status(404).json({
         message: 'Entry does not exist'
       });
     } else {
-      cov_ng5wgb9mi.b[1][1]++;
+      cov_fvovny6iz.b[1][1]++;
     }
 
     // if diary entry exists...
-    cov_ng5wgb9mi.s[17]++;
+    cov_fvovny6iz.s[17]++;
     return res.status(200).json({
       message: 'Entry was found',
       entryFound
@@ -829,8 +829,8 @@ class EntriesController {
    * @return {json} res.json
    */
   static getAllEntries(_req, res) {
-    cov_ng5wgb9mi.f[6]++;
-    cov_ng5wgb9mi.s[18]++;
+    cov_fvovny6iz.f[6]++;
+    cov_fvovny6iz.s[18]++;
 
     res.status(200).json({
       message: 'Entries retrieved successfully',
@@ -847,37 +847,37 @@ class EntriesController {
    * @return {json} res.json
    */
   static update(req, res) {
-    cov_ng5wgb9mi.f[7]++;
+    cov_fvovny6iz.f[7]++;
 
-    const { entryId } = (cov_ng5wgb9mi.s[19]++, req.params);
-    const { title, entry } = (cov_ng5wgb9mi.s[20]++, req.body);
+    const { entryId } = (cov_fvovny6iz.s[19]++, req.params);
+    const { title, entry } = (cov_fvovny6iz.s[20]++, req.body);
 
     // find entry with params entryId
-    const entryFound = (cov_ng5wgb9mi.s[21]++, _db2.default.find(entryItem => {
-      cov_ng5wgb9mi.f[8]++;
-      cov_ng5wgb9mi.s[22]++;
+    const entryFound = (cov_fvovny6iz.s[21]++, _db2.default.find(entryItem => {
+      cov_fvovny6iz.f[8]++;
+      cov_fvovny6iz.s[22]++;
       return entryItem.entryId === entryId;
     }));
 
     // if entry does not exist...
-    cov_ng5wgb9mi.s[23]++;
+    cov_fvovny6iz.s[23]++;
     if (!entryFound) {
-        cov_ng5wgb9mi.b[2][0]++;
-        cov_ng5wgb9mi.s[24]++;
+        cov_fvovny6iz.b[2][0]++;
+        cov_fvovny6iz.s[24]++;
         return res.status(404).json({ message: 'Entry does not exist' });
       } else {
-      cov_ng5wgb9mi.b[2][1]++;
+      cov_fvovny6iz.b[2][1]++;
     } // Get index of entry
-    const index = (cov_ng5wgb9mi.s[25]++, _db2.default.indexOf(entryFound));
+    const index = (cov_fvovny6iz.s[25]++, _db2.default.indexOf(entryFound));
 
-    const updatedEntry = (cov_ng5wgb9mi.s[26]++, {
+    const updatedEntry = (cov_fvovny6iz.s[26]++, {
       entryId, title, entry, date: _moment.date, time: _moment.time
     });
 
     // Replace entry with the updated entry
-    cov_ng5wgb9mi.s[27]++;
+    cov_fvovny6iz.s[27]++;
     _db2.default.splice(index, 1, updatedEntry);
-    cov_ng5wgb9mi.s[28]++;
+    cov_fvovny6iz.s[28]++;
     return res.status(201).json({
       message: 'Entry modified successfully',
       updatedEntry

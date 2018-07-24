@@ -1,13 +1,13 @@
 'use strict';
 
-var cov_tywjdqbaa = function () {
-  var path = 'C:\\Users\\tunde\\Desktop\\Fizzo\\MyDiary\\server\\model\\db.js',
-      hash = '81ae5336857bd60dfc604db690aac09caa952134',
+var cov_r2l2kl8jk = function () {
+  var path = 'C:\\Users\\tunde\\Desktop\\MyDiary\\server\\model\\db.js',
+      hash = 'a2138028e45c5d805fc5f8a2b88448ac1212fe85',
       Function = function () {}.constructor,
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: 'C:\\Users\\tunde\\Desktop\\Fizzo\\MyDiary\\server\\model\\db.js',
+    path: 'C:\\Users\\tunde\\Desktop\\MyDiary\\server\\model\\db.js',
     statementMap: {
       '0': {
         start: {
@@ -42,7 +42,7 @@ var cov_tywjdqbaa = function () {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-const entries = (cov_tywjdqbaa.s[0]++, [{
+const entries = (cov_r2l2kl8jk.s[0]++, [{
   date: '11-07-2018',
   time: '7:29 AM',
   entryId: '1',

@@ -1,13 +1,13 @@
 'use strict';
 
-var cov_jv8w57ym9 = function () {
-    var path = 'C:\\Users\\tunde\\Desktop\\Fizzo\\MyDiary\\server\\route\\index.js',
-        hash = '1ce05cfbc0ec9e4842b234f5ab1ef4323f9fb816',
+var cov_292wemep1a = function () {
+    var path = 'C:\\Users\\tunde\\Desktop\\MyDiary\\server\\route\\index.js',
+        hash = 'fa097b47e0676d39167d43c8cca79f5bf2b97530',
         Function = function () {}.constructor,
         global = new Function('return this')(),
         gcv = '__coverage__',
         coverageData = {
-        path: 'C:\\Users\\tunde\\Desktop\\Fizzo\\MyDiary\\server\\route\\index.js',
+        path: 'C:\\Users\\tunde\\Desktop\\MyDiary\\server\\route\\index.js',
         statementMap: {
             '0': {
                 start: {
@@ -157,24 +157,24 @@ var _entries2 = _interopRequireDefault(_entries);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const router = (cov_jv8w57ym9.s[0]++, _express2.default.Router());
+const router = (cov_292wemep1a.s[0]++, _express2.default.Router());
 
-cov_jv8w57ym9.s[1]++;
+cov_292wemep1a.s[1]++;
 router.get('/', (req, res) => {
-    cov_jv8w57ym9.f[0]++;
-    cov_jv8w57ym9.s[2]++;
+    cov_292wemep1a.f[0]++;
+    cov_292wemep1a.s[2]++;
 
     return res.status(200).json('welcome to my MyDiary app');
 });
-cov_jv8w57ym9.s[3]++;
+cov_292wemep1a.s[3]++;
 router.get('/entries', _entries2.default.getAllEntries);
-cov_jv8w57ym9.s[4]++;
+cov_292wemep1a.s[4]++;
 router.get('/entries/:entryId', _entries2.default.getEntry);
-cov_jv8w57ym9.s[5]++;
+cov_292wemep1a.s[5]++;
 router.post('/entries', _entries2.default.create);
-cov_jv8w57ym9.s[6]++;
+cov_292wemep1a.s[6]++;
 router.put('/entries/:entryId', _entries2.default.update);
-cov_jv8w57ym9.s[7]++;
+cov_292wemep1a.s[7]++;
 router.delete('/entries/:entryId', _entries2.default.deleteEntry);
 
 exports.default = router;

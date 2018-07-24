@@ -1,13 +1,13 @@
 "use strict";
 
-var cov_2r94gh9udf = function () {
-  var path = "C:\\Users\\tunde\\Desktop\\Fizzo\\MyDiary\\server\\utils\\guid.js",
-      hash = "b93fe462e736aaabe2c29e21e81d3f57508670bc",
+var cov_1gstwn78h8 = function () {
+  var path = "C:\\Users\\tunde\\Desktop\\MyDiary\\server\\utils\\guid.js",
+      hash = "9622ad652fe3be3888dbf3cd4975b4673a7527f5",
       Function = function () {}.constructor,
       global = new Function('return this')(),
       gcv = "__coverage__",
       coverageData = {
-    path: "C:\\Users\\tunde\\Desktop\\Fizzo\\MyDiary\\server\\utils\\guid.js",
+    path: "C:\\Users\\tunde\\Desktop\\MyDiary\\server\\utils\\guid.js",
     statementMap: {
       "0": {
         start: {
@@ -138,26 +138,26 @@ var cov_2r94gh9udf = function () {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-cov_2r94gh9udf.s[0]++;
+cov_1gstwn78h8.s[0]++;
 /**
  * @exports
  * @Unique ID
  */
 
 const generate = () => {
-  cov_2r94gh9udf.f[0]++;
-  cov_2r94gh9udf.s[1]++;
+  cov_1gstwn78h8.f[0]++;
+  cov_1gstwn78h8.s[1]++;
   return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
 };
 
-cov_2r94gh9udf.s[2]++;
+cov_1gstwn78h8.s[2]++;
 const formGuid = () => {
-  cov_2r94gh9udf.f[1]++;
-  cov_2r94gh9udf.s[3]++;
+  cov_1gstwn78h8.f[1]++;
+  cov_1gstwn78h8.s[3]++;
   return `${generate() + generate()}-${generate()}-${generate()}-${generate()}-${generate()}${generate()}${generate()}`;
 };
 
-const guid = (cov_2r94gh9udf.s[4]++, formGuid());
+const guid = (cov_1gstwn78h8.s[4]++, formGuid());
 
 exports.default = guid;
 //# sourceMappingURL=guid.js.map

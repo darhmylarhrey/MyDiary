@@ -1,13 +1,13 @@
 'use strict';
 
-var cov_21iz8nhhxm = function () {
-  var path = 'C:\\Users\\tunde\\Desktop\\Fizzo\\MyDiary\\server\\validate\\validation.js',
-      hash = 'de3b2ed31cab5c79ee52ec54d379aed40061254c',
+var cov_l3mbyam5c = function () {
+  var path = 'C:\\Users\\tunde\\Desktop\\MyDiary\\server\\validate\\validation.js',
+      hash = '526d320d410c22126d469837ad3aa99a1cc7d958',
       Function = function () {}.constructor,
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: 'C:\\Users\\tunde\\Desktop\\Fizzo\\MyDiary\\server\\validate\\validation.js',
+    path: 'C:\\Users\\tunde\\Desktop\\MyDiary\\server\\validate\\validation.js',
     statementMap: {
       '0': {
         start: {
@@ -217,22 +217,22 @@ exports.default = {
    * @returns {object}
    */
   entryValidation: (req, res, next) => {
-    cov_21iz8nhhxm.f[0]++;
+    cov_l3mbyam5c.f[0]++;
 
-    const { title, entry } = (cov_21iz8nhhxm.s[0]++, req.body);
+    const { title, entry } = (cov_l3mbyam5c.s[0]++, req.body);
 
-    cov_21iz8nhhxm.s[1]++;
-    if ((cov_21iz8nhhxm.b[1][0]++, !title) || (cov_21iz8nhhxm.b[1][1]++, typeof title !== 'string') || (cov_21iz8nhhxm.b[1][2]++, title.toString().trim() === '') || (cov_21iz8nhhxm.b[1][3]++, !entry) || (cov_21iz8nhhxm.b[1][4]++, typeof entry !== 'string') || (cov_21iz8nhhxm.b[1][5]++, entry.toString().trim() === '')) {
-      cov_21iz8nhhxm.b[0][0]++;
-      cov_21iz8nhhxm.s[2]++;
+    cov_l3mbyam5c.s[1]++;
+    if ((cov_l3mbyam5c.b[1][0]++, !title) || (cov_l3mbyam5c.b[1][1]++, typeof title !== 'string') || (cov_l3mbyam5c.b[1][2]++, title.toString().trim() === '') || (cov_l3mbyam5c.b[1][3]++, !entry) || (cov_l3mbyam5c.b[1][4]++, typeof entry !== 'string') || (cov_l3mbyam5c.b[1][5]++, entry.toString().trim() === '')) {
+      cov_l3mbyam5c.b[0][0]++;
+      cov_l3mbyam5c.s[2]++;
 
       return res.status(400).send({
         message: 'Valid title and entry data is required'
       });
     } else {
-      cov_21iz8nhhxm.b[0][1]++;
+      cov_l3mbyam5c.b[0][1]++;
     }
-    cov_21iz8nhhxm.s[3]++;
+    cov_l3mbyam5c.s[3]++;
     return next();
   }
 

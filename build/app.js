@@ -1,13 +1,13 @@
 'use strict';
 
-var cov_2hvw87okkr = function () {
-  var path = 'C:\\Users\\tunde\\Desktop\\Fizzo\\MyDiary\\server\\app.js',
-      hash = '466559a7079562cff541a1a4c3c804909eab23d6',
+var cov_22ctnlm9wz = function () {
+  var path = 'C:\\Users\\tunde\\Desktop\\MyDiary\\server\\app.js',
+      hash = 'a9f82e6987b9bf41c02c8b838ce775cbf52d3ae3',
       Function = function () {}.constructor,
       global = new Function('return this')(),
       gcv = '__coverage__',
       coverageData = {
-    path: 'C:\\Users\\tunde\\Desktop\\Fizzo\\MyDiary\\server\\app.js',
+    path: 'C:\\Users\\tunde\\Desktop\\MyDiary\\server\\app.js',
     statementMap: {
       '0': {
         start: {
@@ -204,27 +204,27 @@ var _index2 = _interopRequireDefault(_index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const app = (cov_2hvw87okkr.s[0]++, (0, _express2.default)());
+const app = (cov_22ctnlm9wz.s[0]++, (0, _express2.default)());
 
 // log requests to the console
-cov_2hvw87okkr.s[1]++;
+cov_22ctnlm9wz.s[1]++;
 app.use((0, _morgan2.default)('dev'));
 
 // parse incoming requests data
-cov_2hvw87okkr.s[2]++;
+cov_22ctnlm9wz.s[2]++;
 app.use(_bodyParser2.default.json());
-cov_2hvw87okkr.s[3]++;
+cov_22ctnlm9wz.s[3]++;
 app.use(_bodyParser2.default.urlencoded({ extended: true }));
-cov_2hvw87okkr.s[4]++;
+cov_22ctnlm9wz.s[4]++;
 app.use('/api/v1', _index2.default);
 
 // set environment port
-const PORT = (cov_2hvw87okkr.s[5]++, (cov_2hvw87okkr.b[0][0]++, process.env.PORT) || (cov_2hvw87okkr.b[0][1]++, 4500));
+const PORT = (cov_22ctnlm9wz.s[5]++, (cov_22ctnlm9wz.b[0][0]++, process.env.PORT) || (cov_22ctnlm9wz.b[0][1]++, 4500));
 
-cov_2hvw87okkr.s[6]++;
+cov_22ctnlm9wz.s[6]++;
 app.listen(PORT, () => {
-  cov_2hvw87okkr.f[0]++;
-  cov_2hvw87okkr.s[7]++;
+  cov_22ctnlm9wz.f[0]++;
+  cov_22ctnlm9wz.s[7]++;
 
   console.log(`Your app is listening on ${PORT}!`);
 });
