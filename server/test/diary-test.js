@@ -7,13 +7,17 @@ import chaiHttp from 'chai-http';
 import GUID from '../utils/guid';
 import { date, time } from '../utils/moment';
 import app from '../app';
+import entries from '../model/db';
 
 // chai.use(chaiAsPromised)
 chai.should();
 
  chai.use(chaiHttp);
 
+ const databaseLength = entries.length;
+
  describe('Tests for My Diary API endpoints', () => {
+  
   describe('GET api/v1', () => {
     it('should display a welcome page', (done) => {
       chai.request(app)
@@ -43,6 +47,7 @@ chai.should();
           .end((err, res) => {
             expect(res.statusCode).to.equal(201);
             expect(res.body.newEntry).to.include.keys('entryId');
+            expect(entries.length).to.equal(databaseLength + 1);
             res.body.should.be.a('object');
             res.body.should.have.property('message').eql('Entry added successfully');
             res.body.should.have.property('newEntry').eql(newEntry);
@@ -108,7 +113,7 @@ chai.should();
       });
     });
   });
-  
+
     describe('PUT api/v1/entries/:entryId', () => {
       it('should return an error message for an entry that does not exist', (done) => {
         const updatedEntry = {
