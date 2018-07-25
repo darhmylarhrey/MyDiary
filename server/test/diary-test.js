@@ -107,110 +107,19 @@ chai.should();
           });
       });
     });
-
-    describe('DELETE api/v1/entries/:entryId', () => {
-      it('should delete selected ride offer option', (done) => {
-        chai.request(app)
-          .delete('/api/v1/entries/3')
-          .end((err, res) => {
-            expect(res.statusCode).to.equal(204);
-            if (err) return done(err);
-            done();
-          });
-      });
-    });
   });
-
-   describe('Handles invalid endpoints for entries', () => {
-     //describe('POST api/v1/entries', () => {
-       // it('should return an error message to check entry input', (done) => {
-      //   const newEntry = {
-      //     id: GUID,
-      //     entry: 'This is an invalid test',
-      //     date,
-      //     time,
-      //   };
-      //   chai.request(app)
-      //     .post('/api/v1/entries')
-      //     .send(newEntry)
-      //     .end((err, res) => {
-      //       expect(res.statusCode).to.equal(400);
-      //       res.body.should.be.a('object');
-      //       res.body.should.have.property('message').eql('Valid title and entry data is required');
-      //       if (err) return done(err);
-      //       done();
-      //     });
-      // });
-
-      // it('should return an error message to check input fields', (done) => {
-      //   const newEntry = {
-      //     id: GUID,
-      //     title: 'Invalid endpoint',
-      //     date,
-      //     time,
-      //   };
-      //   chai.request(app)
-      //     .post('/api/v1/entries')
-      //     .send(newEntry)
-      //     .end((err, res) => {
-      //       expect(res.statusCode).to.equal(400);
-      //       res.body.should.be.a('object');
-      //       res.body.should.have.property('message').eql('Valid title and entry data is required');
-      //       if (err) return done(err);
-      //       done();
-      //     });
-      // });
-    //});
-
+  
     describe('PUT api/v1/entries/:entryId', () => {
-      // it('should return an error message to check entry input', (done) => {
-      //   const updatedEntry = {
-      //     id: '1',
-      //     entry: 'This is an invalid test',
-      //     date,
-      //     time,
-      //   };
-      //   chai.request(app)
-      //     .put('/api/v1/entries/2')
-      //     .send(updatedEntry)
-      //     .end((err, res) => {
-      //       expect(res.statusCode).to.equal(400);
-      //       res.body.should.be.a('object');
-      //       res.body.should.have.property('message').eql('Valid title and entry data is required');
-      //       if (err) return done(err);
-      //       done();
-      //     });
-      // });
-
-      // it('should return an error message to check input fields', (done) => {
-      //   const updatedEntry = {
-      //     id: '1',
-      //     title: 'Invalid endpoint',
-      //     date,
-      //     time,
-      //   };
-      //   chai.request(app)
-      //     .put('/api/v1/entries/1')
-      //     .send(updatedEntry)
-      //     .end((err, res) => {
-      //       expect(res.statusCode).to.equal(400);
-      //       res.body.should.be.a('object');
-      //       res.body.should.have.property('message').eql('Valid title and entry data is required');
-      //       if (err) return done(err);
-      //       done();
-      //     });
-      // });
-
       it('should return an error message for an entry that does not exist', (done) => {
         const updatedEntry = {
-          entryId: '3',
+          entryId: '7',
           title: 'Hello World!',
           entry: 'This should not valid test',
           date,
           time,
         };
         chai.request(app)
-          .put('/api/v1/entries/3')
+          .put('/api/v1/entries/7')
           .send(updatedEntry)
           .end((err, res) => {
             expect(res.statusCode).to.equal(404);
@@ -234,19 +143,4 @@ chai.should();
           });
       });
     });
-
-    describe('DELETE api/v1/entries/:entryId', () => {
-      it('should return error if selected entry id does not exist', (done) => {
-        chai.request(app)
-          .delete('/api/v1/entries/8')
-          .end((err, res) => {
-            expect(res.statusCode).to.equal(404);
-            res.body.should.be.a('object');
-            res.body.should.have.property('message').eql('Entry not found');
-            if (err) return done(err);
-            done();
-          });
-      });
-    });
-  });
 });

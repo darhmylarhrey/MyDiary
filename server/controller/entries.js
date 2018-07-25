@@ -25,7 +25,7 @@ class EntriesController {
    * @param {object} res - Response object
    * @return {json} res.json
    */
-  static create(req, res) {
+  static createEntry(req, res) {
     const { title, entry } = req.body;
 
     const newEntry = { entryId: GUID, title, entry, date, time };
@@ -40,41 +40,15 @@ class EntriesController {
   }
 
   /**
-   * Deletes an entry
-   *
-   * @staticmethod
-   * @param  {object} req - Request object
-   * @param {object} res - Response object
-   * @return {json} res.json
-   */
-  static deleteEntry(req, res) {
-    const { entryId } = req.params;
-
-    // check if entry exists
-    const entryFound = entries.find(entry => entry.entryId === entryId);
-
-    // If entry does not exist...
-    if (!entryFound) {
-      return res.status(404).json({
-        message: 'Entry not found',
-      });
-    }
-
-    // if entry exists...
-    entries.splice(entries.indexOf(entryFound), 1);
-    return res.status(204).json();
-  }
-
-  /**
-   * Return entry that matches entryId
-   *
-   * @staticmethod
-   * @param  {object} req - Request object
-   * @param {object} res - Response object
-   * @param {function} next - middleware next (for error handling)
-   * @return {json} res.json
-   */
-  static getEntry(req, res) {
+    * Return entry that matches entryId
+    *
+    * @staticmethod
+    * @param  {object} req - Request object
+    * @param {object} res - Response object
+    * @param {function} next - middleware next (for error handling)
+    * @return {json} res.json
+    */
+  static getOneEntry(req, res) {
     const { entryId } = req.params;
 
     // find entry with params entryId
@@ -117,7 +91,7 @@ class EntriesController {
    * @param {object} res - Response object
    * @return {json} res.json
    */
-  static update(req, res) {
+  static updateEntry(req, res) {
     const { entryId } = req.params;
     const { title, entry} = req.body;
 
@@ -141,6 +115,33 @@ class EntriesController {
       updatedEntry,
     });
   }
+
+  // /**
+  //  * Deletes an entry
+  //  *
+  //  * @staticmethod
+  //  * @param  {object} req - Request object
+  //  * @param {object} res - Response object
+  //  * @return {json} res.json
+  //  */
+  // static deleteEntry(req, res) {
+  //   const { entryId } = req.params;
+
+  //   // check if entry exists
+  //   const entryFound = entries.find(entry => entry.entryId === entryId);
+
+  //   // If entry does not exist...
+  //   if (!entryFound) {
+  //     return res.status(404).json({
+  //       message: 'Entry not found',
+  //     });
+  //   }
+
+  //   // if entry exists...
+  //   entries.splice(entries.indexOf(entryFound), 1);
+  //   return res.status(204).json();
+  // }
+
 }
 
 export default EntriesController;
