@@ -8,7 +8,6 @@
     "lint:js": "eslint --fix server/**/*.js",
     "start": "nodemon --exec babel-node --presets env server/app.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-   
     "build-babel": "babel -d ./build ./server -s",
     "build": "npm run build-babel",
     "start:dev": "npm run build && node ./build/app.js"
@@ -37,6 +36,12 @@
     "moment": "^2.22.2",
     "morgan": "^1.9.0",
     "nodemon": "^1.18.3",
+    "bcrypt": "^3.0.0",
+    "jsonwebtoken": "^8.3.0",
+    "dotenv": "^6.0.0",
+    "pg": "^7.4.3",
+    "random-string": "^0.2.0",
+    "nodemailer": "^4.6.7",
     "nyc": "^12.0.2"
   },
   "devDependencies": {
@@ -50,6 +55,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.9.1",
     "istanbul": "^0.4.5",
+    "jsdoc": "^3.5.5",
     "mocha": "^5.2.0"
   }
 }
